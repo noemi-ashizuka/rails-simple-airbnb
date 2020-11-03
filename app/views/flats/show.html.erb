@@ -1,0 +1,14 @@
+<h1><%= @flat.name %></h1>
+
+<h4><%= @flat.description %></h4>
+
+<p>Maximum guests:<%= @flat.number_of_guests %></p>
+
+<h3>Price per night: <%= @flat.price_per_night %></h3>
+
+<%= link_to flat_path(@flat), method: :delete do %>
+  <i class="material-icons">delete_forever</i>
+<% end %>
+<%= link_to edit_flat_path(@flat) do %>
+  <i class="material-icons">edit</i>
+<% end %>

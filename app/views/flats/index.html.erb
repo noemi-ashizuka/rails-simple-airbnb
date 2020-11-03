@@ -1,6 +1,13 @@
-<h1>Restaurants</h1>
+<h1>Flats</h1>
+<p><%= link_to 'Add a flat', new_flat_path %></p>
 
 <% @flats.each do |flat| %>
-  <%= flat.name %>
-  <%= flat.address %>
+  <%= link_to flat_path(flat) do %>
+    <div>
+      <h3><%= flat.name %></h3>
+      <p><%= flat.address %></p>
+      <span><i class="small material-icons">people</i><%= flat.number_of_guests %>
+      <i class="small material-icons">attach_money</i><%= flat.price_per_night %></span>
+    </div>
+  <% end %>
 <% end %>
