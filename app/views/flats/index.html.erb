@@ -4,6 +4,7 @@
 <div class="cards-wrapper">
   <% @flats.each do |flat| %>
     <div class="card-flat">
+      <img src="<%= flat.url %>" class="card-image">
       <div class="card-content">
         <%= link_to flat_path(flat) do %>
           <h4><%= flat.name %></h4>

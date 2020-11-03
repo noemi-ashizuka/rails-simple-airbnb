@@ -1,3 +1,5 @@
+<img src="<%= @flat.url %>%" class="flat-details-image">
+
 <h1><%= @flat.name %></h1>
 
 <h4><%= @flat.description %></h4>
@@ -9,6 +11,6 @@
 <%= link_to flat_path(@flat), method: :delete do %>
   <i class="material-icons">delete_forever</i>
 <% end %>
-<%= link_to edit_flat_path(@flat) do %>
+<%= link_to edit_flat_path do %>
   <i class="material-icons">edit</i>
 <% end %>
