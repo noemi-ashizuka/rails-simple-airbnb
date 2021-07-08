@@ -1,6 +1,9 @@
 <h1>Flats</h1>
 <p><%= link_to 'Add a flat', new_flat_path %></p>
-
+<%= form_tag(flats_path, method: :get) do %>
+  <%= text_field_tag(:query, params[:query]) %>
+  <%= submit_tag ("Search") %>
+<% end %>
 <div class="cards-wrapper">
   <% @flats.each do |flat| %>
     <div class="card-flat">
